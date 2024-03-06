@@ -1,0 +1,39 @@
+erDiagram
+    User ||--o{ Order : Zamowienie
+    User ||--o{ BasketPosition : PozycjeWKoszyku
+    User {
+        INTEGER ID
+        VARCHAR Login
+        VARCHAR Password
+        ENUM Type
+    }   
+    Order ||--|{OrderPosition:PozycjeZamowienia
+    Order {
+        INTEGER ID
+        INTEGER UserID
+        DATETIME Date
+    }
+
+    OrderPosition {
+        INTEGER ID
+        INTEGER OrderID
+        INTEGER Amount
+        FLOAT Price
+    }
+    BasketPosition {
+        INTEGER ID
+        INTEGER ProductID
+        INTEGER UserID
+        INTEGER Amount
+    }
+    Product ||--o{BasketPosition : Produkt
+    Product{
+        INTEGER ID
+        VARCHAR Name
+        FLOAT Price
+        VARCHAR Image
+        BOOLEAN IsActive
+    } 
+
+
+  
