@@ -14,6 +14,7 @@ namespace Model
     {
         [Key]
         public int ID { get; set; }
+        
 
         [ForeignKey(nameof(ProductID))]
         public int ProductID { get; set; }
@@ -30,14 +31,12 @@ namespace Model
             builder
                 .HasOne(bp => bp.Product)
                 .WithMany(p => p.BasketPositions)
-                .HasForeignKey(bp => bp.ProductID)
-                .OnDelete(DeleteBehavior.Restrict);
+                .OnDelete(DeleteBehavior.Cascade);
 
             builder
                 .HasOne(bp => bp.User)
                 .WithMany(u => u.BasketPositions)
-                .HasForeignKey(bp => bp.UserID)
-                .OnDelete(DeleteBehavior.Restrict);
+                .OnDelete(DeleteBehavior.Cascade);
         }
     }
 

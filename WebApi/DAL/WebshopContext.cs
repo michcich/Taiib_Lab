@@ -22,32 +22,11 @@ namespace DAL
         public DbSet<BasketPosition> BasketPositions { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderPosition> OrderPositions { get; set; }
-
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            modelBuilder.Entity<BasketPosition>()
-                .HasOne(bp => bp.ProductGroup)  
-                .WithMany(pg => pg.BasketPositions)
-                .HasForeignKey(bp => bp.ProductGroupID)
-                .OnDelete(DeleteBehavior.Cascade);
+            if (!optionsBuilder.IsConfigured)
+                optionsBuilder.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=Taiib;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
 
-            modelBuilder.Entity<BasketPosition>()
-                .HasOne(bp => bp.User)
-                .WithMany(u => u.BasketPositions)
-                .HasForeignKey(bp => bp.UserID)
-                .OnDelete(DeleteBehavior.Cascade);
-
-            modelBuilder.Entity<Order>()
-                .HasOne(o => o.User)
-                .WithMany(u => u.Orders)
-                .HasForeignKey(o => o.UserID)
-                .OnDelete(DeleteBehavior.Cascade);
-
-            modelBuilder.Entity<OrderPosition>()
-                .HasOne(op => op.Order)
-                .WithMany(o => o.OrderPositions)
-                .HasForeignKey(op => op.OrderID)
-                .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }

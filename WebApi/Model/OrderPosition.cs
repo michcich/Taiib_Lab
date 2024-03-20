@@ -27,8 +27,7 @@ namespace Model
             builder
                 .HasOne(op => op.Order)
                 .WithMany(o => o.OrderPositions)
-                .HasForeignKey(op => op.OrderID)
-                .OnDelete(DeleteBehavior.Restrict);
+                .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }

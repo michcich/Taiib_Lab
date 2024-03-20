@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Cichosz\\Taiib_Lab\\WebApi\\Model\\Model.csproj": {}
+    "D:\\Cichosz\\Taiib_Lab\\WebApi\\BLL\\BLL.csproj": {}
   },
   "projects": {
-    "D:\\Cichosz\\Taiib_Lab\\WebApi\\Model\\Model.csproj": {
+    "D:\\Cichosz\\Taiib_Lab\\WebApi\\BLL\\BLL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Cichosz\\Taiib_Lab\\WebApi\\Model\\Model.csproj",
-        "projectName": "Model",
-        "projectPath": "D:\\Cichosz\\Taiib_Lab\\WebApi\\Model\\Model.csproj",
+        "projectUniqueName": "D:\\Cichosz\\Taiib_Lab\\WebApi\\BLL\\BLL.csproj",
+        "projectName": "BLL",
+        "projectPath": "D:\\Cichosz\\Taiib_Lab\\WebApi\\BLL\\BLL.csproj",
         "packagesPath": "C:\\Users\\Student\\.nuget\\packages\\",
-        "outputPath": "D:\\Cichosz\\Taiib_Lab\\WebApi\\Model\\obj\\",
+        "outputPath": "D:\\Cichosz\\Taiib_Lab\\WebApi\\BLL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -42,24 +42,6 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "dependencies": {
-            "Microsoft.EntityFrameworkCore.Design": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[7.0.17, )"
-            },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
-              "target": "Package",
-              "version": "[7.0.17, )"
-            },
-            "Microsoft.EntityFrameworkCore.Tools": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[7.0.17, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",

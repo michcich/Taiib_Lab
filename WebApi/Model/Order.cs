@@ -17,6 +17,7 @@ namespace Model
 
         [ForeignKey(nameof(UserID))]
         public int UserID { get; set; }
+
         public User User { get; set; }
 
         public DateTime Date { get; set; }
@@ -28,8 +29,7 @@ namespace Model
             builder
                 .HasOne(o => o.User)
                 .WithMany(u => u.Orders)
-                .HasForeignKey(o => o.UserID)
-                .OnDelete(DeleteBehavior.Restrict);
+                .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }
