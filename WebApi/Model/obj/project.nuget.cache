@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tBuLVgWMV9mSGY0Xq9sAUo/hBHbYxImLOljHlJzgyU193JLOsnFcJQd7loZ4pMmznVGpinaVehuZKk5jxhMBQw==",
+  "dgSpecHash": "hW5XhYxG5u6w6FxOBVQlNRvNMUiu2aNZS5opq78IB0Hyv2PHE+phYVcPe5Ol/pCtmHxjBgY8sJwMMPnmzRqybw==",
   "success": true,
-  "projectFilePath": "D:\\Cichosz\\Taiib_Lab\\WebApi\\Model\\Model.csproj",
+  "projectFilePath": "D:\\Cichosz\\27.03\\Taiib_Lab\\WebApi\\Model\\Model.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Student\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\Student\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
